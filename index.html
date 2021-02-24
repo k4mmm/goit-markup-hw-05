@@ -24,7 +24,7 @@
                 <nav class="nav nav-flex">
                     <a class="logo-header" href="./index.html"><span class="web">Web</span>Studio</a>
                     <ul class="nav-items ">
-                        <li class="item">
+                        <li class="item ">
                             <a class="current" href="./index.html">Студия</a>
                         </li>
                         <li class="item">
@@ -59,7 +59,16 @@
             <!--Герой-->
             <section class="hero">
                 <h1>Эффективные решения <br> для вашего бизнеса</h1>
-                <button type="button" class="button">Заказать услугу</button>
+                <button type="button" class="button" data-modal-open>Заказать услугу</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button class="modal-btn" data-modal-close>
+                            <svg сlass="icon" width="11" height="11">
+                                <use href="./images/icons.svg#Vector"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </section>
         </div>
         <!--особенности-->
@@ -116,15 +125,24 @@
                 <h2>Чем мы занимаемся</h2>
                 <ul class="what-we-do-list">
                     <li class="item">
-                        <img src="images/what-we-do1.jpg" alt="Компьютер" width="370">
+                        <div class="thumb">
+                            <img src="images/what-we-do1.jpg" alt="Компьютер" width="370">
+                            <p>Десктопные приложения</p>
+                        </div>
                     </li>
 
                     <li class="item">
-                        <img src="images/what-we-do2.jpg" alt="Телефон" width="370">
+                        <div class="thumb">
+                            <img src="images/what-we-do2.jpg" alt="Телефон" width="370">
+                            <p>Мобильные приложения</p>
+                        </div>
                     </li>
 
                     <li class="item">
-                        <img src="images/what-we-do3.jpg" alt="Планшет" width="370">
+                        <div class="thumb">
+                            <img src="images/what-we-do3.jpg" alt="Планшет" width="370">
+                            <p>Дизайнерские решения</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -430,6 +448,7 @@
         </section>
 
     </footer>
+    <script src="./modal.js"></script>
 </body>
 
 </html>
